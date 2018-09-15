@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 2.8
+services:
+  - postgresql
+before_script:
+  - curl https://cli-assets.heroku.com/install.sh | sh
+script:
+  - bundle install --without production test
+  - rake generate_secret_token
+  - git add -A
+  - git commit -m “Prepare Redmine for Heroku deployment”
+  - git push heroku 3.4-stable:master
+  - heroku run rake db:migrate
+  - heroku run rake redmine:load_default_data
