@@ -8,9 +8,9 @@ script:
   - bundle install --without production test
   - rake generate_secret_token
   - heroku auth:token
-  - git add 
+  - git add .
   - git commit -m "heroku deploy"
-  - git push heroku master
+  #- git push heroku master
   - heroku run rake db:migrate --app dli-redmine
   - heroku run rake redmine:load_default_data --app dli-redmine
 deploy: &heroku
