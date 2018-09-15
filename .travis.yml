@@ -5,8 +5,7 @@ services:
 before_script:
   - curl https://cli-assets.heroku.com/install.sh | sh
 script:
-  - bundle install 
-  #--without production test
+  - bundle install --without production test
   - rake generate_secret_token
   - heroku auth:token
   - git add .
