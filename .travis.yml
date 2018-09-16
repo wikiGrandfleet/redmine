@@ -11,8 +11,9 @@ script:
   - git add .
   - git commit -m "heroku deploy"
   #- git push heroku master
-  - heroku run rake db:migrate --app dli-redmine
-  - heroku run rake redmine:load_default_data --app dli-redmine
+  # Do inside the heroku shell
+  #- heroku run rake db:migrate --app dli-redmine
+  #- heroku run rake redmine:load_default_data --app dli-redmine
 deploy: &heroku
   provider: heroku
   app: dli-redmine

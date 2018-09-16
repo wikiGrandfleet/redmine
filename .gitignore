@@ -25,6 +25,8 @@
 /public/themes/*
 !/public/themes/alternate
 !/public/themes/classic
+!/public/themes/flatly_light_redmine
+!/public/themes/minimalflat2
 !/public/themes/README
 /tmp/*
 /tmp/cache/*
@@ -38,4 +40,5 @@
 
 /.bundle
 
+*.zip
 
