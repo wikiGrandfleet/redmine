@@ -3,3 +3,20 @@
 Redmine is a flexible project management web application written using Ruby on Rails framework.
 
 More details can be found in the doc directory or on the official website http://www.redmine.org
+
+
+== Installation Instructions
+
+The `travis.yml` file contains the basic version to deploy to heroku, after the redmine app is deployed you have to go and commands to initialize the database
+
+heroku run rake db:migrate --app dli-redmine
+heroku run rake redmine:load_default_data --app dli-redmine
+
+Most important are the instructions from 
+
+https://lluisgili.heroku.com/lluis/published/redmine+on+heroku and http://www.redmine.org/projects/redmine/wiki/HowTo_Install_Redmine_on_Heroku
+
+Inspired by 
+https://www.redmine.org/projects/redmine/wiki/HowTo_Install_Redmine_(3xx)_on_Heroku_
+https://www.fatosmorina.com/deploy-redmine-heroku/
+
