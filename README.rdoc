@@ -4,7 +4,7 @@ Redmine is a flexible project management web application written using Ruby on R
 
 More details can be found in the doc directory or on the official website http://www.redmine.org
 
-Push to repo using some mapping notation git push origin github 3.4-stable:master
+Push to repo using some mapping notation git push origin github 3.4-stable:master, also origin is used to pull updates from the original redmine
 
 == Installation Instructions
 
